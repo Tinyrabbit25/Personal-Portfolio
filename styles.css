@@ -1,0 +1,16 @@
+:root{
+    --Main-color: black;
+    --sceondary-color: ;
+    --third-color:
+    --fourth-color: ;
+}
+
+body{
+    background-color: var(--Main-color);
+}
+
+h1{
+    font-size: 28px;
+    font-weight: bold;
+    font-family: 'TImes New Roman', Times, serif;
+}
