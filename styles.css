@@ -10,6 +10,8 @@ body{
     color: #ededed;
 }
 
+/* Navbar */
+
 .header{
     position: fixed;
     top: 0;
@@ -183,4 +185,28 @@ body{
 .home-sci a:hover::before{
     width: 100%;
 }
+/* End Navabar*/
 
+.skills {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.skills h2{
+    text-align: center;
+    font-size: 35px;
+    flex-basis: 100%;
+}
+
+.skills-container {  
+  display: flex;         /* whichever wrapper you’re using */
+  justify-content: center;   /* center them horizontally */
+  gap: 40px;                 /* space between */
+  flex-wrap: wrap;           /* stack on small screens */  
+}
+
+.skills details {
+  max-width: 250px;
+}
