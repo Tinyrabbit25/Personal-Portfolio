@@ -1,3 +1,11 @@
+:root{
+    --bg-color: #1f242d;
+    --secondary-bg-color: #323946;
+    --main-color: #0ef;
+    --text-color: #fff;
+}
+
+
 *{
     margin: 0;
     padding: 0;
@@ -141,8 +149,8 @@ body{
 
 .home-sci{
     position: absolute;
-    bottom: 40px;
-    width: 170px;
+    margin-top: 500px;
+    width: 140px;
     display: flex;
     justify-content:space-evenly;
 }
@@ -187,26 +195,29 @@ body{
 }
 /* End Navabar*/
 
-.skills {
-    display: flex;
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    color:var(--secondary-bg-color);
+    font-size: 1.6rem;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5 ease;
+}
+
+.btn:hover{
+    box-shadow: none;
+}
+
+
+
+.about{
+    display:flex;
     justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.skills h2{
-    text-align: center;
-    font-size: 35px;
-    flex-basis: 100%;
-}
-
-.skills-container {  
-  display: flex;         /* whichever wrapper you’re using */
-  justify-content: center;   /* center them horizontally */
-  gap: 40px;                 /* space between */
-  flex-wrap: wrap;           /* stack on small screens */  
-}
-
-.skills details {
-  max-width: 250px;
+    align-items: center;
+    gap: 2rem;
+    background: var(--secondary-bg-color);
 }
