@@ -18,6 +18,18 @@ body{
     color: #ededed;
 }
 
+section{
+    height: 100vh;   /*Controls each section takes full viewport height */
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10%;
+}
+
+html{
+    scroll-behavior: smooth; /* Make it have that smooth scrolling effect */
+}
+
 /* Navbar */
 
 .header{
@@ -95,6 +107,35 @@ body{
     width: 345px;
     height: 50px;
 }
+
+.home {
+    height: 100vh;
+    display: flex; 
+    align-items: center;
+    justify-content: space-between; /* keeps text left, image right */
+    padding: 0 10%; /* matches spacing like About section */
+}
+
+.home-img-container {
+    flex-shrink: 0;
+    width: 380px;   /* adjust width */
+    height: 420px;  /* adjust height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 6px solid var(--main-color); /* clean border */
+    border-radius: 12px; /* optional rounded corners */
+    overflow: hidden;
+    background: #081b29; /* matches site background */
+}
+
+.home-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px; /* match container corners */
+}
+
 
 .btn-box a {
     position: relative;
@@ -195,29 +236,95 @@ body{
 }
 /* End Navabar*/
 
+
+/* About me section */
 .btn {
     display: inline-block;
     padding: 1rem 2.8rem;
     background: var(--main-color);
     border-radius: 4rem;
     box-shadow: 0 0 1rem var(--main-color);
-    color:var(--secondary-bg-color);
-    font-size: 1.6rem;
+    font-size: 1.2rem;
+    color:var(--secondary-bg-color); 
     letter-spacing: .1rem;
     font-weight: 600;
-    transition: .5 ease;
+    transition: .5s ease;
 }
 
-.btn:hover{
+.btn:hover {
     box-shadow: none;
 }
 
+.about-section { 
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 92px;
+    padding: 40px 8%;
+}
 
-
-.about{
-    display:flex;
+.profile-pic-container{
+    flex-shrink: 0; /* prevents shrinking */
+    width: 320px;   /* adjust size */
+    height: 320px;
+    display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
-    background: var(--secondary-bg-color);
+    border-radius: 50%;
+    border: 6px solid var(--main-color);
+    box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color);
+    overflow: hidden; /* makes sure image stays inside circle */
 }
+
+.profile-pic{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* fills circle without stretching */
+    border-radius: 50%; /* keeps circular shape */
+}
+
+.heading {
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+.about-content{
+    flex: 1;
+    min-width: 250px;
+}
+
+.about-content h2{
+    text-align: left;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.about-content h3{
+    font-size: 32px;
+    font-size: 700;
+    color: #00abf0
+}
+
+.about-content p {
+    font-size: 16px;
+    margin: 10px 0 40px;
+}
+
+.blue{
+    color: var(--main-color);
+}
+
+@media (max-width: 900px){
+    .about-section{
+        flex-direction: column;
+        gap: 24px;
+        text-align: center;
+    }
+    .about-contnent{
+        width: 220px;
+        height: 220px;
+    }
+}
+
+/* End About me section */
