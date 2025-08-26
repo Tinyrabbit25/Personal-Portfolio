@@ -10,6 +10,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
     font-family: 'Poppins', 'sans-serif';
 }
 
@@ -19,15 +23,13 @@ body{
 }
 
 section{
-    height: 100vh;   /*Controls each section takes full viewport height */
-    display:flex;
-    align-items: center;
-    justify-content: center;
+    height: 100vh;   /*Controls each section takes full viewport height */    
     padding: 0 10%;
 }
 
 html{
-    scroll-behavior: smooth; /* Make it have that smooth scrolling effect */
+    overflow-x: hidden; /* Prevents horizontal scroll */
+    font-size: 62.5%; /* 1rem = 10px */
 }
 
 /* Navbar */
@@ -240,11 +242,11 @@ html{
 /* About me section */
 .btn {
     display: inline-block;
-    padding: 1rem 2.8rem;
+    padding: 1rem  2.8rem;
     background: var(--main-color);
     border-radius: 4rem;
     box-shadow: 0 0 1rem var(--main-color);
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color:var(--secondary-bg-color); 
     letter-spacing: .1rem;
     font-weight: 600;
@@ -283,14 +285,14 @@ html{
     border-radius: 50%; /* keeps circular shape */
 }
 
-.heading {
-    text-align: center;
-    font-size: 4.5rem;
-}
-
 .about-content{
     flex: 1;
     min-width: 250px;
+}
+
+.heading{
+    text-align: center;
+    font-size: 4.5rem;
 }
 
 .about-content h2{
@@ -307,8 +309,8 @@ html{
 }
 
 .about-content p {
-    font-size: 16px;
-    margin: 10px 0 40px;
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
 }
 
 .blue{
@@ -328,3 +330,40 @@ html{
 }
 
 /* End About me section */
+
+/* Skills Section */
+
+.skills h2{
+    margin-bottom: 5rem;
+}
+
+.skills-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:6rem;
+}
+
+.skills-container .skills-box{
+    flex: 1 1 30rem;
+    background: var(--secondary-bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+}
+
+.skills-box i{
+    font-size: 7rem;
+    color: var(--main-color);
+}
+
+.skills-box h3{
+    font-size: 2.6rem;
+}
+
+.skills-box p{
+    font-size: 1.4rem;
+    margin: 1rem 0 3rem;
+}
