@@ -23,8 +23,8 @@ body{
 }
 
 section{
-    height: 100vh;   /*Controls each section takes full viewport height */    
-    padding: 0 10%;
+    min-height: 100vh;   /*Controls each section takes full viewport height */    
+    padding: 5rem 10%;
 }
 
 html{
@@ -293,6 +293,7 @@ html{
 .heading{
     text-align: center;
     font-size: 4.5rem;
+
 }
 
 .about-content h2{
@@ -352,6 +353,12 @@ html{
     border-radius: 2rem;
     text-align: center;
     border: .2rem solid var(--bg-color);
+    transition: .5s ease;
+}
+
+.skills-container .skills-box:hover{
+    border-color: var(--main-color);
+    transform: scale(1.02);
 }
 
 .skills-box i{
@@ -366,4 +373,14 @@ html{
 .skills-box p{
     font-size: 1.4rem;
     margin: 1rem 0 3rem;
+}
+/* End Skills Section */
+
+/* Projects Section */
+.projects {
+    background: var(--secondary-bg-color);
+}
+
+.projects h2{
+    margin-bottom: 4rem;
 }
