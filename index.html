@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Personal Portfolio</title>
-<link rel="stylesheet" href="styles.css">
-<script src="script.js" defer></script>
+<link rel="stylesheet" href="styles.css"> <!--CSS stylesheet-->
+<script src="main.js" defer></script> <!--JS Script-->
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
@@ -20,7 +20,7 @@
           <a href = "#about">About</a>
           <a href ="#skills"> Skills</a>
           <a href = "#projects"> Projects</a>
-          <a href = "#"> Contact</a>
+          <a href = "#contact"> Contact</a>
       </nav>
 </header>
 
@@ -149,12 +149,26 @@
           <a href="#"><i class='bx bx-link-external'></i></a>
       </div>
     </div>
-
   </div>
 </section>
 
   <!--Contacts Section-->
-  
+  <section class="contact" id="contact">
+    <h2 class="heading"> Contact <span class="blue"> Me!</span></h2>
+
+    <form action="#">
+      <div class="input-box">
+        <input type="text" placeholder="Full Name">
+        <input type="email" placeholder="Email Address">
+      </div>
+      <div class="input-box">
+        <input type="number" placeholder="Phone Number">
+        <input type="text" placeholder="Email Subject">
+      </div>
+      <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+      <input type="submit" value="Send Message" class="btn">
+    </form>
+  </section>
 
 
 
