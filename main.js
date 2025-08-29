@@ -34,3 +34,14 @@ header.classList.toggle('sticky', window.scrollY > 100);
   menuIcon.classList.remove('bx-x');
   navbar.classList.remove('active');
 };
+
+/*------------Scroll--------------*/
+ScrollReveal({
+    reset: true,
+    distance: '80px',
+    duration: 2000,
+    delay: 200
+});
+
+ScrollReveal().reveal('.home-content, .heading',{origin: 'top'});
+ScrollReveal().reveal('.home-img, .skills-container, .projects-box, .contact form',{origin: 'bottom'});
