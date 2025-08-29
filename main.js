@@ -1,6 +1,15 @@
+/*Makes the hamburger lines appear */
+let menuIcon = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navbar');
+
+menuIcon.onclick = () => {
+  menuIcon.classList.toggle('bx-x');
+  navbar.classList.toggle('active');
+};
+
 /*---------Make the navbar highlight the current section---------*/
 let sections = document.querySelectorAll('section');
-let navLinks = document.querySelector('header nav a');
+let navLinks = document.querySelectorAll('header nav a');
 
 window.onscroll = () => {
     sections.forEach(sec=>{
@@ -18,9 +27,10 @@ window.onscroll = () => {
     });
 
 /* ---------------------Sticky Navbar------------------------*/
-
-let header = document.querySelectorAll('header');
-
+let header = document.querySelector('header');
 header.classList.toggle('sticky', window.scrollY > 100);
 
+/*------------Gets rid of the box icon----------- */
+  menuIcon.classList.remove('bx-x');
+  navbar.classList.remove('active');
 };
