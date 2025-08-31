@@ -37,11 +37,22 @@ header.classList.toggle('sticky', window.scrollY > 100);
 
 /*------------Scroll--------------*/
 ScrollReveal({
-    reset: true,
     distance: '80px',
     duration: 2000,
     delay: 200
 });
 
-ScrollReveal().reveal('.home-content, .heading',{origin: 'top'});
-ScrollReveal().reveal('.home-img, .skills-container, .projects-box, .contact form',{origin: 'bottom'});
+ScrollReveal().reveal('.home-content, .heading, .home-sci', {origin: 'top'});
+ScrollReveal().reveal('.home-img, .skills-container, .projects-box, .contact form', {origin: 'bottom'});
+ScrollReveal().reveal('.home-content h3, .profile-pic-container img', {origin: 'left'});
+ScrollReveal().reveal('.home-content p, .about-content', {origin: 'right'});
+
+/*-------------typed js-------------*/
+
+const typed = new Typed('.multiple-text',{
+  strings: ['Software Engineer', 'Web Developer', 'Game Developer',],
+  typeSpeed: 100,
+  backSpeed: 100,
+  backDelay: 1000,
+  loop: true
+});

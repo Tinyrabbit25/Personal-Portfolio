@@ -48,6 +48,10 @@ html{
     z-index: 100;
 }
 
+.white{
+    color: white;
+}
+
 .header.sticky{
     border-bottom: .1rem solid rgba(0,0,0,.2);
 }
@@ -111,8 +115,12 @@ html{
 .home-content .btn-box{
     display: flex;
     justify-content: space-between;
-    width: 345px;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 600px;
     height: 50px;
+    margin: 0 auto;
 }
 
 .home {
@@ -134,6 +142,7 @@ html{
     border-radius: 12px; /* optional rounded corners */
     overflow: hidden;
     background: #081b29; /* matches site background */
+    animation: floatImage 4s ease-in-out infinite;
 }
 
 .home-img {
@@ -141,6 +150,20 @@ html{
     height: 100%;
     object-fit: cover;
     border-radius: 12px; /* match container corners */
+}
+
+@keyframes floatImage{
+    0%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-2.4rem);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
 }
 
 
@@ -161,6 +184,9 @@ html{
     letter-spacing: 1px;
     z-index: 1;
     transition: .5s;
+    flex: 1;
+    min-width: 120px;
+    height: 50px;
 }
 
 .btn-box a:hover{
