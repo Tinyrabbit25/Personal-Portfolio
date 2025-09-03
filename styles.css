@@ -463,8 +463,9 @@ html{
 }
 
 .projects-layer p{
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     margin: .3rem 0 1rem;
+    color: black;
 }
 
 .projects-layer a{
