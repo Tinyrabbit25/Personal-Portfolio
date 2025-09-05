@@ -694,4 +694,65 @@ html{
     }
 }
 
+/*--------Model Styles--------*/
+
+.model{
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(0,0,0,0.7);
+}
+
+.model-content{
+    background: var(--secondary-bg-color);
+    margin: 10% auto; /* Centers Vertically */
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 80%;
+    max-width: 600px;
+    color: var(--text-color);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+
+    /*-----Animation effect-----*/  
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.4s ease;
+} 
+
+.model.show .model-content{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.model-content h2{
+    font-size: 2rem;
+    width: 80%;
+    margin-bottom: 5px;
+}
+
+.model-content p{
+    font-size: 15px;
+}
+
+.close-btn{
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover{
+    color: var(--main-color);
+}
+
+
 

@@ -56,3 +56,36 @@ const typed = new Typed('.multiple-text',{
   backDelay: 1000,
   loop: true
 });
+
+/* -------- Modal (Read More popup) -------- */
+
+const model = document.getElementById('about-model');
+const readMoreBtn = document.querySelector('.about-content .btn');
+const closeBtn = document.querySelector('.close-btn');
+
+readMoreBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  model.style.display = 'block';
+  
+  // wait a tiny moment before adding "show"
+  requestAnimationFrame(() => {
+    model.classList.add('show');
+  })
+});
+
+// Closes the read more when clicked x
+closeBtn.addEventListener('click', () => {
+  model.classList.remove('show');
+  setTimeout(() => {
+    model.style.display = 'none';
+  }, 400)
+});
+
+window.addEventListener('click', (e) => {
+  if(e.target == model) {
+    model.classList.remove('show');
+    setTimeout(() => {
+      model.style.display = 'none'
+    }, 400)
+  }
+})
