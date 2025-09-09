@@ -87,5 +87,57 @@ window.addEventListener('click', (e) => {
     setTimeout(() => {
       model.style.display = 'none'
     }, 400)
-  }
-})
+  };
+});
+
+// Select all read more buttons inside the skills section
+const skillReadMoreBtns = document.querySelectorAll('.skills-box .btn');
+
+// Loop through each button
+skillReadMoreBtns.forEach((btn, index) => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    // Find the matching modal for this button
+    const model = document.getElementById(`skill-model-${index}`);
+
+    if (model) {
+      // Show the modal
+      model.style.display = 'block';
+
+      // Smooth animation
+      requestAnimationFrame(() => {
+        model.classList.add('show');
+      });
+    }
+  });
+});
+
+//For closing the read more
+const skillCloseBtns = document.querySelectorAll('.close-btn');
+
+skillCloseBtns.forEach(closeBtn => {
+  closeBtn.addEventListener('click', () => {
+    const SkillModel = closeBtn.closest('.model');
+    SkillModel.classList.remove('show');
+    setTimeout(() => {
+      SkillModel.style.display = 'none';
+    }, 400);
+  });
+});
+
+//For closing it outside of the x so click anywhere to close
+
+window.addEventListener('click', (e) => {
+  if(e.target.classList.contains('model')) {
+    e.target.classList.remove('show');
+    setTimeout(() => {
+      e.target.style.display = 'none';
+    }, 400)
+  };
+});
+
+
+
+
+
