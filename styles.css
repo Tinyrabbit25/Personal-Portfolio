@@ -754,6 +754,11 @@ html{
     color: var(--main-color);
 }
 
+.model-content li{
+   list-style-position: inside;
+   font-size: 15px;
+   margin-top: 8px;
+}
 
 
 
